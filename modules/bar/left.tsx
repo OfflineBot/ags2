@@ -11,7 +11,7 @@ const workspaces = Variable<{ [key: string]: string}>({}).poll(wk_speed, () => {
     const active = hyprland.get_focused_workspace().id;
     let window_name = hyprland.get_focused_client()?.title || null;
     if (window_name === null) {
-        window_name = " ";
+        window_name = "";
     }
 
     let wk_status: { [key: string]: string } = {};
@@ -26,7 +26,9 @@ const workspaces = Variable<{ [key: string]: string}>({}).poll(wk_speed, () => {
 
     const sortedEntries = Object.entries(wk_status).sort(([nameA], [nameB]) => nameA.localeCompare(nameB));
     const sortedWkStatus = Object.fromEntries(sortedEntries);
-    sortedWkStatus[window_name] = "active-window";
+    if (window_name != "") {
+        sortedWkStatus[window_name] = "active-window";
+    }
 
     return sortedWkStatus
 })

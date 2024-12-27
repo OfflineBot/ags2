@@ -60,7 +60,7 @@ const data_box = (name: string, value: Variable<string>) => {
 
 export default function Stats(gdkmonitor: number) {
     return <window
-        name={"stats"}
+        name={`stats-${gdkmonitor}`}
         visible={false}
         className="Stats"
         exclusivity={Astal.Exclusivity.EXCLUSIVE}

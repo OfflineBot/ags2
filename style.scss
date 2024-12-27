@@ -8,7 +8,7 @@ $red: #e69ea8;
 $cyan: #81cec2;
 $pink: #fbc2e8;
 $yellow: #f8dfa4;
-$purple: #7277e5;
+$purple: #6894a8;
 $dark_purple: #b8bbfc;
 
 
@@ -20,11 +20,13 @@ window.Bar {
     background: transparent;
     color: #ffffff;
     font-weight: bold;
+    border-radius: 5px;
 
     >centerbox {
         background: #{$bg1};
         border-radius: 5px;
-        border: 1px solid #888888;
+        margin: 5px;
+        margin-bottom: 0px;
         border-top: none;
         border-left: none;
         border-right: none;
@@ -104,3 +106,7 @@ window.Bar {
 .stat-CPU { color: #{$cyan}; }
 .stat-DISK { color: #{$yellow}; }
 .stat-SOUND { color: #{$purple}; }
+
+.Applauncher3 {
+    background-color: #000;
+}

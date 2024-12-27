@@ -20,7 +20,7 @@ const btn = (name: string, command: string, relative_icon_path: string) => {
 
 export default function Logout(gdkmonitor: number) {
     return <window
-        name={"logout"}
+        name={`logout-${gdkmonitor}`}
         visible={false}
         className="Logout"
         exclusivity={Astal.Exclusivity.IGNORE}
